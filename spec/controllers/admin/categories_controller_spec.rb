@@ -16,6 +16,17 @@ describe Admin::CategoriesController do
     assert_response :redirect, :action => 'index'
   end
 
+describe "GET #new" do
+  
+  it "should responds successfully" do
+    get :new
+    expect(response.status).to eq(200)
+    #expect(response).to have_http_status(200)
+  end
+  
+  
+end
+
   describe "test_edit" do
     before(:each) do
       get :edit, :id => Factory(:category).id
